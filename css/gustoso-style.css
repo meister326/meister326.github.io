@@ -1,0 +1,1921 @@
+/* -- GUSTOSO PAGE LAYOUT -- */
+
+@font-face {
+    
+    font-family: 'gustoso-social';
+    src: url('../font/gustoso-social.eot?86917848');
+    src: url('../font/gustoso-social.eot?86917848#iefix') format('embedded-opentype'),
+         url('../font/gustoso-social.woff2?86917848') format('woff2'),
+         url('../font/gustoso-social.woff?86917848') format('woff'),
+         url('../font/gustoso-social.ttf?86917848') format('truetype'),
+         url('../font/gustoso-social.svg?86917848#gustoso-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+html, body {
+    
+    min-width: 1260px;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+    text-align: center;
+    
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    
+}
+
+.content-wrapper {
+    
+    width: 1260px;
+    
+    margin: 0 auto;
+    padding: 0;
+    
+    text-align: left;
+    
+}
+
+.clearfix::after {
+    
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.sr-only {
+    
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    
+    padding: 0;
+    margin: -1px;
+    
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    
+}
+
+body {
+    
+    background-color: #ffffff;
+    
+}
+
+body > svg {
+    
+    position: absolute;
+    margin-left: -1px;
+    
+}
+
+.page-header {
+    
+    position: relative;
+    z-index: 2;
+    
+    background-color: rgba(86, 83, 76, 0.53);
+    
+}
+
+
+.page-footer {
+    
+    width: 100%;
+    height: 70px;
+    padding: 70px 0;
+    
+    background-color: #f3f1e9;
+    overflow: hidden;
+    
+}
+
+/* -- GUSTOSO BRAND BAR -- */
+
+.brand-bar {
+    
+    float: left;
+    width: 200px;
+    
+    margin: 0;
+    margin-right: 10px;
+    
+}
+
+.brand-logo {
+    
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 1px;
+    
+}
+
+.brand-logo__image {
+    
+    width: 140px;
+    height: 44px;
+    
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    outline: none;
+    
+}
+
+.page-footer .brand-bar {
+    
+    width: 190px;
+    height: 70px;
+    margin: 0 20px;
+    
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-footer .brand-logo {
+    
+    padding: 0;
+    padding-top: 23px;
+    
+}
+
+/* -- GUSTOSO NAVIGATION MENU -- */
+
+.navigation-menu {
+    
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navigation-menu__item {
+    
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    
+}
+
+.navigation-menu__link {
+    
+    margin: 0;
+    padding: 0;
+    
+    font-size: inherit;
+    line-height: inherit;
+    
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.navigation-menu--inline {
+    
+    display: block;
+    
+    font-size: 0;
+    line-height: 1px;
+    
+    vertical-align: middle;
+    
+}
+
+.navigation-menu--inline .navigation-menu__item {
+    
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.navigation-menu--main,
+.navigation-menu--footer {
+    
+    float: left;
+    display: block;
+    
+    width: 820px;
+    margin: 0 10px;
+    
+    text-align: center;
+    
+}
+
+.navigation-menu--main .navigation-menu,
+.navigation-menu--footer .navigation-menu {
+    
+    height: 69px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    
+}
+
+.navigation-menu--main .navigation-menu::before,
+.navigation-menu--footer .navigation-menu::before {
+    
+    content: "";
+    display: inline-block;
+    
+    width: 0;
+    height: 100%;
+    
+    vertical-align: middle;
+    
+}
+
+.navigation-menu--main .navigation-menu__item,
+.navigation-menu--footer .navigation-menu__item {
+    
+    position: relative;
+    
+    padding: 0 41px;
+    
+    font-size: 14px;
+    line-height: 24px;
+    
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    
+    background-color: transparent;
+    color: #ffffff;
+    
+}
+
+.navigation-menu--main .navigation-menu__item:first-child,
+.navigation-menu--footer .navigation-menu__item:first-child {
+    
+    padding-left: 0;
+    
+}
+
+.navigation-menu--main .navigation-menu__item:last-child,
+.navigation-menu--footer .navigation-menu__item:last-child {
+    
+    padding-right: 0;
+    
+}
+
+.navigation-menu--main .navigation-menu__item::after,
+.navigation-menu--footer .navigation-menu__item::after {
+    
+    content: "~";
+    position: absolute;
+    
+    top: 0;
+    right: 0;
+    
+    transform: translateX(50%);
+    
+    cursor: default;
+    
+}
+
+.navigation-menu--main .navigation-menu__item:last-child::after,
+.navigation-menu--footer .navigation-menu__item:last-child::after {
+    
+    display: none;
+    
+}
+
+.navigation-menu--main .navigation-menu__link:hover {
+    
+    border-bottom: 1px dashed #ffffff;
+    
+}
+
+.navigation-menu--footer {
+    
+    width: 515px;
+    margin: 0;
+    color: #56534c;
+    
+    border-top: 1px solid #c2beba;
+    border-bottom: 1px solid #c2beba;
+    
+}
+
+.navigation-menu--footer:last-child {
+    
+    float: right;
+    
+}
+
+.navigation-menu--footer .navigation-menu__item {
+    
+    color: inherit;
+    
+}
+
+.navigation-menu--footer .navigation-menu {
+    
+    height: 68px;
+    padding-left: 2px;
+}
+
+.navigation-menu--footer .navigation-menu__link:hover {
+    
+    border-bottom: 1px dashed #56534c;
+    
+}
+
+/* -- GUSTOSO SOCIAL LINKS -- */
+
+.social-links {
+    
+    float: right;
+    width: 200px;
+    height: 70px;
+    
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    
+    font-size: 0;
+    line-height: 1px;
+    
+    text-align: right;
+    vertical-align: middle;
+    
+}
+
+.social-links:before {
+    
+    content: "";
+    display: inline-block;
+    
+    width: 0;
+    height: 100%;
+    
+    vertical-align: middle;
+    
+}
+
+.social-links li {
+    
+    display: inline-block;
+    
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    
+    text-align: right;
+    vertical-align: middle;
+    
+}
+
+.social-links__link {
+    
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    
+    margin: 0 8px;
+    padding: 0;
+    
+    font-family: "gustoso-social";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    
+    font-size: 16px;
+    line-height: 24px;
+    
+    text-decoration: none;
+    text-transform: none;
+    
+    color: #ffffff;
+    
+}
+
+li:first-child .social-links__link {
+    
+    margin-left: 0;
+    
+}
+
+li:last-child .social-links__link {
+    
+    margin-right: 0;
+    
+}
+
+.social-links__link:hover {
+    
+    opacity: 0.53;
+    
+}
+
+.social-links__link--twitter:before { content: '\f099'; } /* '' */
+.social-links__link--facebook:before { content: '\f09a'; } /* '' */
+.social-links__link--instagram:before { content: '\f32d'; } /* '' */
+
+/* -- GUSTOSO PROMO -- */
+
+.gustoso-section {
+    
+    position: relative;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.gustoso-promo {
+    
+    height: 900px;
+    
+    margin-top: -70px;
+    
+    background-image: url(../img/bg/bg-promo.jpg);
+    
+}
+
+.gustoso-promo::before {
+    
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.gustoso-promo__text {
+    
+    position: relative;
+    
+    width: 903px;
+    height: 897px;
+    
+    margin: 0 auto;
+    margin-top: -65px;
+    padding: 0;
+    
+    background-color: transparent;
+    background-image: url(../img/bg/text-promo.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.gustoso-promo__link {
+    
+    position: absolute;
+    bottom: 215px;
+    left: 0;
+    right: 0;
+    
+    display: block;
+    
+    width: 196px;
+    padding: 12px 0;
+    padding-left: 2px;
+    margin: 0 auto;
+    
+    border: 1px dashed #9e9c93;
+    
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.3em;
+    
+    text-align: center;
+    vertical-align: middle;
+    
+    color: #ffffff;
+    background-color: rgba(86, 83, 76, 0.53);
+    
+}
+
+.gustoso-promo__link:hover {
+    
+    background-color: rgba(86, 83, 76, 0.75);
+    border: 1px dashed #ffffff;
+    
+}
+
+/* -- GUSTOSO DECOLINE -- */
+
+.decoline {
+    
+    position: relative;
+    height: 10px;
+    
+    background-color: #ffffff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.50);
+    
+}
+
+.decoline__element {
+    
+    position: absolute;
+    top: -48px;
+    left: 0;
+    right: 0;
+    
+    width: 106px;
+    height: 106px;
+    
+    margin: 0 auto;
+    
+    background-color: transparent;
+    background-image: url(../img/bg/bg-bread.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+/* -- GUSTOSO ART CAKES -- */
+
+.art-cakes {
+    
+    width: 100%;
+    height: 750px;
+    
+    margin: 0;
+    padding: 0;
+    
+    background-color: #ffffff;
+    background-image: url(../img/bg/bg-texture.jpg);
+    
+}
+
+.art-cakes__article,
+.art-cakes__gallery {
+    
+    float: left;
+    
+    width: 630px;
+    margin: 0;
+    
+}
+
+.art-cakes__article {
+    
+    padding-top: 100px;
+    
+    text-align: center;
+    
+}
+
+.art-cakes__title {
+    
+    margin: 0;
+    margin-top: -2px;
+    margin-bottom: 12px;
+    padding-left: 3px;
+    
+    font-size: 48px;
+    line-height: 30px;
+    
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    
+    color: #56534c;
+    
+}
+
+.art-cakes__article p {
+    
+    margin: 0 60px;
+    padding-left: 1px;
+    
+    font-size: 14px;
+    line-height: 24px;
+    
+    letter-spacing: 0.12em;
+    color: #56534c;
+    
+}
+
+.art-cakes__article .art-cakes__slogan {
+    
+    margin: 0;
+    margin-bottom: 53px;
+    padding-left: 3px;
+    
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #a47d5e;
+    
+}
+
+.art-cakes__article .art-cakes__chef {
+    
+    margin-top: 35px;
+    margin-bottom: 62px;
+    padding-left: 5px;
+    
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #56534c;
+    
+}
+
+.art-cakes__article .art-cakes__author {
+    
+    position: relative;
+    
+    height: 60px;
+    margin: 0 129px;
+    
+}
+
+.art-cakes__author .firstname {
+    
+    float: left;
+    width: 100px;
+    
+}
+
+.art-cakes__author .lastname {
+    
+    float: right;
+    width: 100px;
+    
+}
+
+.art-cakes__author .firstname,
+.art-cakes__author .lastname {
+    
+    width: 111px;
+    padding: 14px 0;
+    
+    border-top: 1px solid #d7d5ca;
+    border-bottom: 1px solid #d7d5ca;
+    
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.025em;
+    
+    color: #56534c;
+    
+}
+
+.art-cakes__author .avatar {
+    
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 100px;
+    height: 100px;
+    
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    
+}
+
+.art-cakes__gallery {
+    
+    position: relative;
+    
+    float: right;
+    padding-top: 100px;
+    
+    font-size: 0;
+    line-height: 1px;
+    
+}
+
+.art-cakes__image {
+    
+    position: relative;
+    display: inline-block;
+    
+    width: 295px;
+    height: 250px;
+    
+    margin: 10px;
+    padding: 0;
+    
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    
+}
+
+.art-cakes__image img {
+    
+    width: 295px;
+    height: auto;
+    
+}
+
+.art-cakes__image::before {
+    
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    
+    content: "";
+    display: inline-block;
+    
+    border: 5px solid #ffffff;
+    
+}
+
+.art-cakes__article blockquote {
+    
+    width: 406px;
+    height: 95px;
+    
+    margin: 0 auto;
+    margin-top: 45px;
+    
+    background-color: transparent;
+    background-image: url(../img/bg/blockquote.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.art-cakes__decor {
+    
+    position: absolute;
+    top: 245px;
+    left: 175px;
+    
+    width: 279px;
+    height: 279px;
+    
+    color: #c9b176;
+    background-color: transparent;
+    background-image: url(../img/bg/bg-tastes.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    opacity: 0.93;
+    
+}
+
+.art-cakes__decor span {
+    
+    display: inline-block;
+    padding: 0px 20px;
+    padding-top: 90px;
+    
+    font-size: 30px;
+    line-height: 36px;
+    
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+/* -- GUSTOSO TOPDISH -- */
+
+.gustoso-topdish {
+    
+    height: 760px;
+    background-image: url("../img/bg/bg-slider.jpg");
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.33);
+    
+}
+
+.gustoso-topdish::before,
+.topdish-slider__content-wrapper::after {
+    
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.topdish-slider {
+    
+    position: relative;
+    
+    margin: 0 95px;
+    margin-top: 97px;
+    
+    padding: 0;
+    padding-top: 43px;
+    padding-right: 105px;
+    
+    overflow: hidden;
+    
+}
+
+.topdish-slider input[type="radio"] {
+    
+    display: none;
+    
+}
+
+.topdish-slider__content-wrapper {
+    
+    position: relative;
+    
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 512px;
+    box-shadow: 0 25px 54px 0 rgba(0, 0, 0, 0.45);
+}
+
+.topdish-slider__navigation-bar {
+    
+    width: 0;
+    
+}
+
+.topdish-slider__btn {
+    
+    position: absolute;
+    bottom: 70px;
+    
+    display: block;
+    width: 32px;
+    height: 32px;
+    
+    margin: 0;
+    padding: 0;
+    
+    border-radius: 50%;
+    border: 2px solid #56534c;
+    color: #56534c;
+    
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    font-size: 26px;
+    line-height: 16px;
+    text-align: center;
+    
+}
+
+.topdish-slider__btn:disabled {
+    
+    border-color: #d8bba3;
+    color: #d8bba3;
+    cursor: default;
+    
+}
+
+.topdish-slider__btn.btn--prev {
+    
+    left: 480px;
+    
+}
+
+.topdish-slider__btn.btn--prev::before {
+    
+    content: "\2039";
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.topdish-slider__btn.btn--next {
+    
+    right: 164px;
+    
+}
+
+.topdish-slider__btn.btn--next::before {
+    
+    content: "\203A";
+    display: inline-block;
+    padding-bottom: 4px;
+    
+}
+
+.topdish-slider__indicators-unit {
+    
+    position: absolute;
+    bottom: 42px;
+    left: 514px;
+    right: 200px;
+    
+    display: block;
+    height: 90px;
+    
+    font-size: 0;
+    line-height: 1px;
+    text-align: center;
+    
+    overflow: hidden;
+    
+}
+
+.topdish-slider__indicator {
+    
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+    
+    margin: 0 14px;
+    padding: 0;
+    
+    border-radius: 50%;
+    background-color: transparent;
+    background-image: url("../img/bg/bg-topdish-sprite.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    
+    filter: sepia(100%);
+    
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.topdish-slider__indicator:first-child {
+    
+    margin-left: 0;
+    
+}
+
+.topdish-slider__indicator:last-child {
+    
+    margin-right: 0;
+    
+}
+
+.topdish-slider__indicators-unit label[for="topdish-01"] {
+    
+    background-position: 0 top;
+    
+}
+
+.topdish-slider__indicators-unit label[for="topdish-02"] {
+    
+    background-position: -120px top;
+    
+}
+
+.topdish-slider__indicators-unit label[for="topdish-03"] {
+    
+    background-position: -240px top;
+    
+}
+
+#topdish-01:checked ~ .topdish-slider__indicators-unit label[for="topdish-01"],
+#topdish-02:checked ~ .topdish-slider__indicators-unit label[for="topdish-02"],
+#topdish-03:checked ~ .topdish-slider__indicators-unit label[for="topdish-03"] {
+    
+    filter: sepia(0%);
+    
+}
+
+.topdish-slider__menu {
+    
+    position: absolute;
+    top: 274px;
+    left: 394px;
+    
+    display: block;
+    width: 50px;
+    height: 50px;
+    
+    border: none;
+    outline: none;
+    
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: url("../img/bg/bg-menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    cursor: pointer;
+    
+}
+
+.topdish-slider__menu:hover {
+    
+    box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+.topdish-slider__content {
+    
+    float: right;
+    
+    width: 420px;
+    height: 278px;
+    
+    padding: 84px 63px;
+    padding-bottom: 150px;
+    
+    background-color: #ffffff;
+    background-image: url("../img/bg/bg-slider-content.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    
+    box-shadow: -2px 0 0 0 rgba(0, 0, 0, 0.25);
+    
+}
+
+.topdish-slider__title {
+    
+    margin: 0;
+    margin-bottom: 11px;
+    padding: 0;
+    
+    font-size: 48px;
+    line-height: 30px;
+    
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    
+    color: #56534c;
+    
+}
+
+.topdish-slider__content p {
+    
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    
+    font-size: 14px;
+    line-height: 24px;
+    
+    letter-spacing: 0.1em;
+    color: #56534c;
+    
+}
+
+.topdish-slider__content .topdish-slider__status {
+    
+    margin-bottom: 53px;
+    
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    color: #a47d5e;
+    
+}
+
+.topdish-slider__image {
+    
+    float: left;
+    
+    width: 419px;
+    height: 512px;
+    
+    overflow: hidden;
+    
+}
+
+.topdish-slider__image::before {
+    
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 0;
+    height: 0;
+    
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-top: 25px solid #ffffff;
+    border-right: 25px solid #ffffff;
+    box-shadow: 3px 6px 13px 0 rgba(0, 0, 0, 0.47);
+    z-index: 1;
+    
+}
+
+.topdish-slider__image img {
+    
+    width: 420px;
+    max-width: 100%;
+    height: 512px;
+    
+    clip-path: url("../index.html/#clip-shape");
+    -webkit-clip-path: polygon(0px 0px, 440px 0px, 440px 600px, 30px 600px, 0px 570px);
+    -webkit-clip-path: url("#clip-shape");
+    
+}
+
+.topdish-slider__ready-in {
+    
+    position: absolute;
+    top: -43px;
+    right: -106px;
+    
+    width: 140px;
+    height: 140px;
+    padding: 30px;
+    
+    text-align: center;
+    
+    background-color: #ffffff;
+    background-image: url("../img/bg/bg-ready.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    box-shadow: 0 25px 54px 0 rgba(105, 80, 58, 0.35);
+    
+}
+
+.topdish-slider__ready-in span {
+    
+    display: block;
+    
+    margin: 0;
+    padding: 0;
+    
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    
+}
+
+.topdish-slider__ready-in .top {
+    
+    margin-bottom: 11px;
+    
+    text-transform: uppercase;
+    color: #a47d5e;
+    
+}
+
+.topdish-slider__ready-in .number {
+    
+    margin-left: 8px;
+    
+    font-size: 92px;
+    line-height: 100%;
+    color: #dfc691;
+    
+}
+
+.topdish-slider__ready-in .bottom {
+    
+    color: #979285;
+    
+}
+
+.topdish-slider__rating {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    
+    width: 21px;
+    height: 140px;
+    
+    background-color: transparent;
+    
+}
+
+.topdish-slider__rating .four-stars {
+    
+    display: block;
+    
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg/bg-rating.png");
+    
+}
+
+.topdish-slider__content-01,
+.topdish-slider__content-02,
+.topdish-slider__content-03 {
+    
+    display: none;
+    
+}
+
+#topdish-01:checked ~ .topdish-slider__content-wrapper .topdish-slider__content-01,
+#topdish-02:checked ~ .topdish-slider__content-wrapper .topdish-slider__content-02,
+#topdish-03:checked ~ .topdish-slider__content-wrapper .topdish-slider__content-03 {
+    
+    display: block;
+    
+}
+
+/* -- GUSTOSO BREAKFAST -- */
+
+.gustoso-breakfast {
+    
+    position: relative;
+    height: 760px;
+    
+    background-image: url("../img/bg/bg-breakfast.jpg");
+    overflow: hidden;
+    
+}
+
+.gustoso-breakfast__pricelist {
+    
+    float: left;
+    width: 500px;
+    
+    padding: 0 30px;
+    padding-top: 99px;
+    padding-left: 100px;
+    
+    text-align: center;
+    color: #ffffff;
+    
+    overflow: hidden;
+    
+}
+
+.gustoso-breakfast__title {
+    
+    margin: 0;
+    margin-left: 17px;
+    margin-bottom: 14px;
+    padding: 0;
+    
+    font-size: 60px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    
+}
+
+.gustoso-breakfast__subtitle {
+    
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 56px;
+    padding: 0;
+    
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    color: #c8a593;
+    
+}
+
+.gustoso-breakfast__menu {
+    
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+    
+    list-style: none;
+    
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    
+    color: #c2beba;
+    
+}
+
+.gustoso-breakfast__menu li {
+    
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    
+}
+
+.gustoso-breakfast__menu li::after {
+    
+    content: "";
+    display: block;
+    
+    height: 27px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    
+    background-color: transparent;
+    background-image: url("../img/bg/bg-list.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.gustoso-breakfast__menu li:last-child::after {
+    
+    display: none;
+    
+}
+
+.gustoso-breakfast__dish {
+    
+    display: block;
+    margin-bottom: 4px;
+    
+    font-size: 30px;
+    font-weight: 700;
+    
+    color: #ffffff;
+    
+}
+
+.gustoso-breakfast__price {
+    
+    display: block;
+    margin-top: 17px;
+    
+    font-size: 36px;
+    
+    color: #dfc691;
+    
+}
+
+.gustoso-breakfast__info {
+    
+    float: right;
+    width: 440px;
+    
+    padding-top: 90px;
+    padding-left: 190px;
+    
+}
+
+/* -- GUSTOSO BLANK -- */
+
+.gustoso-blank {
+    
+    position: relative;
+    
+    width: 440px;
+    height: 600px;
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+.gustoso-blank__wrapper {
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: #f3f1e9;
+    box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.49);
+    z-index: 2;
+    
+    clip-path: url("../index.html/#clip-blank");
+    -webkit-clip-path: polygon(0px 0px, 420px 0px, 420px 512px, 50px 512px, 0px 462px);
+    -webkit-clip-path: url("#clip-blank");
+    
+}
+
+.gustoso-blank__wrapper:before {
+    
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 0;
+    height: 0;
+    
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #ffffff;
+    border-right: 15px solid #ffffff;
+    
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.87);
+    
+}
+
+.gustoso-blank__content {
+    
+    height: 528px;
+    margin: 10px;
+    padding: 25px;
+    border: 1px dashed #9e9c93;
+    
+}
+
+.gustoso-blank__back-01,
+.gustoso-blank__back-02 {
+    
+    position: absolute;
+    top: 26px;
+    bottom: 26px;
+    right: -13px;
+    
+    width: 100px;
+    padding: 9px;
+    
+    background-color: #f3f1e9;
+    box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.49);
+    z-index: 1;
+    
+}
+
+.gustoso-blank__back-02 {
+    
+    top: 50px;
+    bottom: 50px;
+    right: -25px;
+    
+    width: 100px;
+    padding: 8px;
+    
+    z-index: 0;
+    
+}
+
+.gustoso-blank__back-01::before,
+.gustoso-blank__back-02::before {
+    
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px dashed #9e9c93;
+    
+}
+
+.gustoso-blank__separator {
+    
+    position: relative;
+    display: block;
+    
+    margin-top: 34px;
+    margin-bottom: 92px;
+    
+    height: 1px;
+    background-color: #c2beba;
+    
+}
+
+.gustoso-blank__separator::before,
+.gustoso-blank__separator::after {
+    
+    content: "";
+    position: absolute;
+    top: -5.5px;
+    
+    width: 9px;
+    height: 9px;
+    
+    border-radius: 50%;
+    border: 1px solid #c2beba;
+    background-color: #f3f1e9;
+    
+}
+
+.gustoso-blank__separator::before {
+    
+    left: 0;
+    
+}
+
+.gustoso-blank__separator::after {
+    
+    right: 0;
+    
+}
+
+.gustoso-blank__separator span {
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -30px;
+    
+    width: 58px;
+    height: 58px;
+    
+    margin: 0 auto;
+    
+    border-radius: 50%;
+    border: 1px solid #c2beba;
+    
+    background-color: #f3f1e9;
+    background-image: url("../img/bg/bg-blank.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.gustoso-blank__est {
+    
+    display: block;
+    margin-top: 6px;
+    
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.gustoso-blank__est span {
+    
+    float: left;
+    width: 45%;
+    
+}
+
+.gustoso-blank__est span:last-child {
+    
+    float: right;
+    
+}
+
+.gustoso-blank__title {
+    
+    margin: 0;
+    margin-bottom: 29px;
+    padding: 0;
+    
+    font-size: 44px;
+    line-height: 60px;
+    
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-align: center;
+    
+    color: #56534c;
+    
+}
+
+.gustoso-blank__paragraph {
+    
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    
+    font-size: 14px;
+    line-height: 30px;
+    
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
+    
+    color: #56534c;
+    
+}
+
+.gustoso-blank__btn {
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 67px;
+    z-index: 100;
+    
+    width: 188px;
+    margin: 0 auto;
+    
+    border: 1px solid #c2beba;
+    color: #a98567;
+    
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.gustoso-blank__btn:hover {
+    
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.gustoso-blank::after {
+    
+    content: "";
+    position: absolute;
+    bottom: -72px;
+    right: -200px;
+    
+    width: 380px;
+    height: 220px;
+    
+    background-color: transparent;
+    background-image: url("../img/bg/bg-breakfast-plus.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    
+    overflow: hidden;
+    z-index: 2;
+    
+}
+
+/* -- GUSTOSO RECIPE -- */
+
+.gustoso-recipe {
+    
+    width: 100%;
+    height: 846px;
+    
+    padding-top: 104px;
+    
+    background-color: #f3f1e9;
+    background-image: url("../img/bg/bg-recipe.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+    overflow: hidden;
+    
+}
+
+.gustoso-recipe__title {
+    
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    
+    font-size: 48px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-align: center;
+    
+    color: #56534c;
+    
+}
+
+.gustoso-recipe__subtitle {
+    
+    margin: 0;
+    padding: 0;
+    
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: #a47d5e;
+    
+}
+
+.gustoso-recipe__recipe {
+    
+    float: left;
+    width: 290px;
+    
+    margin-top: -12px;
+    margin-right: 10px;
+    
+    text-align: center;
+    
+}
+
+.gustoso-recipe__ingredient {
+    
+    width: 100%;
+    margin-bottom: 56px;
+    
+}
+
+.gustoso-recipe__ingredient-img {
+    
+    display: block;
+    width: 100px;
+    height: 100px;
+    
+    margin: 0 auto;
+    margin-bottom: 19px;
+    
+    border-radius: 50%;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+.gustoso-recipe__ingredient-name {
+    
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    
+    color: #a47d5e;
+    
+}
+
+.gustoso-recipe__ingredient-des {
+    
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    
+    color: #56534c;
+    
+}
+
+.gustoso-recipe__info {
+    
+    float: right;
+    position: relative;
+    
+    width: 840px;
+    margin-left: 10px;
+    margin-top: 80px;
+    
+}
+
+.gustoso-recipe__photo {
+    
+    display: block;
+    height: 536px;
+    
+    border: 10px solid #ffffff;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    
+    overflow: hidden;
+    
+}
+
+.gustoso-recipe__photo img {
+    
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.gustoso-recipe__link {
+    
+    position: absolute;
+    bottom: -17px;
+    left: -22px;
+    
+    width: 169px;
+    padding: 14px 0;
+    
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    
+    border: 1px dashed #dfc691;
+    background-color: #ffffff;
+    color: #dfc691;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+.gustoso-recipe__link:hover {
+    
+    border: 1px dashed #a47d5e;
+    color: #a47d5e;
+    
+}
+
+.gustoso-recipe__link:active {
+    
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.75);
+    
+}
+
+.gustoso-recipe__time {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    
+    width: 200px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+.gustoso-recipe__ready-in {
+    
+    display: block;
+    
+    width: 140px;
+    height: 140px;
+    padding: 30px;
+    margin-bottom: 1px;
+    
+    text-align: center;
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+
+.gustoso-recipe__ready-in:last-child {
+    
+    margin-bottom: 0;
+    
+}
+
+.gustoso-recipe__ready-in span {
+    
+    display: block;
+    
+    margin: 0;
+    padding: 0;
+    
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    
+}
+
+.gustoso-recipe__ready-in .top {
+    
+    margin-top: 14px;
+    margin-bottom: 11px;
+    
+    text-transform: uppercase;
+    color: #a47d5e;
+    
+}
+
+.gustoso-recipe__ready-in .number {
+    
+    margin-left: 8px;
+    
+    font-size: 60px;
+    line-height: 100%;
+    color: #979285;
+    
+}
+
+.gustoso-recipe__ready-in .bottom {
+    
+    color: #979285;
+    
+}
+
+.gustoso-recipe__ready-in.topdish-slider__ready-in {
+    
+    position: static;
+    box-shadow: none;
+    
+}
+
+.gustoso-recipe__ready-in.topdish-slider__ready-in .top {
+    
+    margin-top: 0;
+    
+}
+
+.gustoso-recipe__ready-in.topdish-slider__ready-in .number {
+    
+    font-size: 92px;
+    color: #dfc691;
+    
+}
+
+.gustoso-recipe__ready-in.topdish-slider__ready-in .bottom {
+    
+    color: #979285;
+    
+}
